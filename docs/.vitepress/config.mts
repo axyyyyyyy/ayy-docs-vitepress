@@ -4,6 +4,7 @@ import { generateSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh-CN',
   title: "My Awesome Project",
   description: "A VitePress Site",
   themeConfig: {
