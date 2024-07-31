@@ -4,6 +4,19 @@ import { generateSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: { 
+    optimizeDeps: {
+      exclude: [ 
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client', 
+      ], 
+    },
+    ssr: { 
+      noExternal: [ 
+        // 如果还有别的依赖需要添加的话，并排填写和配置到这里即可
+        '@nolebase/vitepress-plugin-enhanced-readabilities', 
+      ], 
+    }, 
+  }, 
   lang: 'zh-CN',
   title: "My Awesome Project",
   description: "A VitePress Site",
